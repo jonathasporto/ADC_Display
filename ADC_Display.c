@@ -47,8 +47,8 @@ void init_pwm(uint pin) {
     pwm_set_enabled(slice_num, true);
 }
 
-void gpio_irq_handler(uint gpio, uint32_t events) {
-    // verfica se o botao A ou o botao do joystick foi pressionado e aplica o debounce
+// verfica se o botao A ou o botao do joystick foi pressionado e aplica o debounce
+void gpio_irq_handler(uint gpio, uint32_t events) {   
     uint32_t start_time = to_ms_since_boot(get_absolute_time()); 
     if (gpio == BUTTON_JOYSTICK_PIN && (start_time - last_time_Button_Joystick > debounce)){
         last_time_Button_Joystick = start_time;
@@ -140,7 +140,7 @@ int main() {
         }
 
         ssd1306_send_data(&display);
-
+        
         // Pequeno delay para evitar leituras muito rápidas
         sleep_ms(10);
     }
