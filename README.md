@@ -89,4 +89,4 @@ O controle dos botões é feito por meio de **interrupções**, permitindo que o
 
 ## Video de Funcionamento
 
-[AQUI!]()
+[AQUI!](https://youtu.be/NGqsEKhmUhE)
